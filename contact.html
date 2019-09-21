@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="sv">
     <head>
-        <title>*Kontakt</title>
+        <title>Kontakt</title>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="stylesheet" href="style.css">
@@ -9,15 +9,24 @@
     <body>
         <div class="grid-container">
             <div class="header">
-                <h1>Header</h1> 
+                <h1>Made in Paint</h1> 
             </div>
             <div class="nav">
-                <a href="index.html">Mainsite</a>
+                <a href="index.html">Start</a>
                 <a href="gallery.html">Galleri</a>
                 <a href="misc.html">Misc</a>
                 <a href="contact.html">Kontakt</a>
             </div>
-            <div class="main">Main
+            <div class="main">
+                <form action="mailto:robin0001@gmail.com" method="get">
+                    <fieldset>
+                        <legend>Kontakt Formulär</legend>
+                            <label>Email:<br /><input required="required" type="email" name="email"/><br /></label>
+                            <label>Namn:<br /><input required="required" type="name" name="name"/><br /></label>  
+                            <label>Ämne:<br /><textarea required="required" type="subject" cols="36" rows="6"></textarea>><br /></label>
+                            <input type="submit" namn="submit" value="Send"/>
+                    </fieldset>
+                </form>
             </div>  
             <div class="footer">
                 <div class="footer-flex">
@@ -32,7 +41,6 @@
                         <h3>Besök oss</h3>
                         <h4>Address</h4>
                         <p>Galaxy 52, 5252</p>
-
                     </div>
                     <div>
                         <br>
