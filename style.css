@@ -1,7 +1,7 @@
 /* css grid */
 .grid-container {
     display: grid;
-    grid gap: 0.5em;
+    grid-gap: 0.5em;
     /*padding: 0.5em;*/
 }
 .grid-container > div {
@@ -67,7 +67,7 @@ body{
     flex-direction: row;
     flex-wrap: nowrap;
     justify-content: space-around;
-    align-items: center;
+    align-items: flex-start;
     align-content: stretch;
     margin:0.25em;
     padding: 0.25em;
@@ -77,21 +77,50 @@ body{
     display:flex;
     flex-direction: column;
     flex-wrap: nowrap;
-    justify-content: center;
+    justify-content: flex-start;
     align-items: stretch;
-    align-content: stretch;
+}
+/*Main content*/
+.content{
+    display:flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    justify-content: flex-start;
+    align-items: stretch;
+
 }
 .split section {
     text-align: left;
-    width:90%;
+    width:50%;
 }
 .news section {
-    text align:left;
+    text-align: left;
     width:90%;
 }
-/* Mobil förändring för nyhetsflödet */
+/* Mobila förändring för hela sidan, först ipad, sen mobil. */
 @media only screen and (max-width:768px) {
     [class*="split"] {
         flex-wrap: wrap;
+        width: 100%;
+        justify-content: center;
+    }
+    .split section {
+        width: 80%;
+    }
+}
+@media only screen and (max-width:414px) {
+    [class*="split"]  {
+        width: 90%;
+    }
+    [class*="footer-flex"] {
+        flex-direction: column;
+        justify-content: flex-start;
+        width: 100%;
+    }
+    .content iframe{
+        width: 100%;
+    }
+    [class*="footer"] {
+        width: 98%;
     }
 }
