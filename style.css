@@ -10,12 +10,14 @@
 }
 .header { 
     grid-area: 1 / span 12; 
-    background-color: #cccdbb;
+    background-color: #9fa097ec;
     font-family: fantasy, verdana, helvetica, sans-serif;
 }
 .nav {
-     grid-area: 2 / span 12; 
-     font-family: fantasy, verdana, helvetica, sans-serif;
+     grid-area: 2 / span 12;
+     padding: 1.5em;
+     margin: 0.5em;
+     background-color: #23272A;
 }
 .main {
      grid-area: 3 / span 12 / 11;
@@ -23,22 +25,43 @@
 .footer {
      grid-area: 15 / span 12;
      background-color: #23272A;
-     font-family: fantasy, verdana, helvetica, sans-serif;
+
 }
 /* navigation links */
 .nav a:link {
     text-decoration: none;
+    font-size: 2em;
+    padding: 0.3em;
+    margin: 1.5em;
+    font-weight: bold;
 }
 .nav a:visited {
-    color: black;
     text-decoration: none;
 }
+/*footer links*/
+.footer a:hover{
+    background-color: #23272A;
+    color: #23272A;
+}
+.footer a:active{
+    background-color: #23272A;
+    color: #23272A;
+}
 /* all links */
+a:link{
+    color: whitesmoke;
+}
+a:visited {
+    color: whitesmoke;
+}
 a:hover {
-    background-color: #d3d3d3;
+    background-color: #d3d3d37e;
 }
 a:active{
-    color: gray;
+    color: #d3d3d3;
+}
+a:focus{
+    background-color: #2C2F31;
 }
 /* footer */
 .footer-flex {
@@ -52,14 +75,13 @@ a:active{
     padding: 0.25em;
     text-align: left;
 }
-.footer-flex a:hover {
-    background-color: grey;
-}
 /* main stuff */
 body{
     margin:0;
     background-color:  #2C2F31;
     color: whitesmoke;
+    font-family: fantasy, verdana, helvetica, sans-serif;
+    
 
 }
 /* split main flexbox*/
@@ -80,6 +102,7 @@ body{
     flex-wrap: nowrap;
     justify-content: flex-start;
     align-items: stretch;
+    padding:2em;
 }
 /*Main content*/
 .content{
@@ -88,6 +111,7 @@ body{
     flex-wrap: nowrap;
     justify-content: flex-start;
     align-items: stretch;
+    padding: 1.5em;
 
 }
 .split section {
@@ -109,6 +133,15 @@ body{
         width: 80%;
     }
 }
+[class*="nav"] {
+    font-size: 70%;
+    grid-area: 2 / 1 / 3 / 12 span;
+    
+}
+[class*="main"] {
+    grid-area: 3 / 2 / 3 / 12;
+}
+
 @media only screen and (max-width:414px) {
     [class*="split"]  {
         width: 90%;
@@ -123,6 +156,17 @@ body{
     }
     [class*="footer"] {
         width: 98%;
+    }
+   /* [class*="nav"] {
+
+    }*/
+    [class*="nav"] {
+        font-size: 60%;
+        grid-area: 2 / 5 / 2 / 9;
+        
+    }
+    [class*="main"] {
+        grid-area: 3 / 2 / 3 / 12;
     }
 }
 /*galleriet*/
@@ -185,4 +229,8 @@ body{
     grid-column-end: 9;
     grid-row-start: 13;
     grid-row-end: 16;
+}
+/* Forms */
+textarea {
+    resize: none;
 }
