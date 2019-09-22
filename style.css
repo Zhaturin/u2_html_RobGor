@@ -2,11 +2,9 @@
 .grid-container {
     display: grid;
     grid-gap: 0.5em;
-    /*padding: 0.5em;*/
 }
 .grid-container > div {
     text-align: center;
-
 }
 .header { 
     grid-area: 1 / span 12; 
@@ -25,7 +23,6 @@
 .footer {
      grid-area: 15 / span 12;
      background-color: #23272A;
-
 }
 /* navigation links */
 .nav a:link {
@@ -81,8 +78,6 @@ body{
     background-color:  #2C2F31;
     color: whitesmoke;
     font-family: fantasy, verdana, helvetica, sans-serif;
-    
-
 }
 /* split main flexbox*/
 .split{
